@@ -30,7 +30,11 @@ class Song
   def self.genre_count
     # @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
     
-    self.genres.map
+    hash = {}
+    self.genres.each do |g| 
+      hash[genre.name] = self.genres.find_all{|genre| genre.name == g.name}.count
+    end
+    hash
       
   end
   
