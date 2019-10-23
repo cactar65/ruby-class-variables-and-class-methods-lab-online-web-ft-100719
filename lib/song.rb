@@ -32,7 +32,7 @@ class Song
     
     hash = {}
     self.genres.each do |g| 
-      hash[g] = self.genres.find_all{|genre| genre == g}.count
+      hash[g] = @@genres.find_all{|genre| genre == g}.count
     end
     hash
       
